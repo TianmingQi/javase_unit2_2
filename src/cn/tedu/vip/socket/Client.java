@@ -10,31 +10,31 @@ public class Client {
     public Client() {
         try {
             /*
-            ʵ����Socket��Ҫ��������
-            1.��������IP��ַ
-            2.��������,�˿ں�
+            实锟斤拷锟斤拷Socket锟斤拷要锟斤拷锟斤拷锟斤拷锟斤拷
+            1.锟斤拷锟斤拷锟斤拷锟斤拷IP锟斤拷址
+            2.锟斤拷锟斤拷锟斤拷锟斤拷,锟剿口猴拷
 
-            ֻҪʵ�����ɹ��������ӳɹ�
-            ���ʧ�ܾͻ�����쳣
+            只要实锟斤拷锟斤拷锟缴癸拷锟斤拷锟斤拷锟斤拷锟接成癸拷
+            锟斤拷锟绞э拷芫突锟斤拷锟斤拷锟届常
 
-            �˿ں��Ǽ�����ṩ����Ľӿڵı���
-            ip��ַ�Ǽ�����������е�����λ��
+            锟剿口猴拷锟角硷拷锟斤拷锟斤拷峁╋拷锟斤拷锟侥接口的憋拷锟斤拷
+            ip锟斤拷址锟角硷拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷械锟斤拷锟斤拷锟轿伙拷锟�
              */
-            System.out.println("��ʼ����");
+            System.out.println("开始连接");
             socket = new Socket("localhost", 8080);
-            System.out.println("���ӳɹ�");
+            System.out.println("连接成功");
         } catch (Exception e) {
             e.printStackTrace();
         }
         /*
-        win+R����cmd
-        �ڵ����Ľ���������ipconfig�۲챾����ip��ַ
+        win+R锟斤拷锟斤拷cmd
+        锟节碉拷锟斤拷锟侥斤拷锟斤拷锟斤拷锟斤拷锟斤拷ipconfig锟桔察本锟斤拷锟斤拷ip锟斤拷址
          */
     }
 
     public void start() {
         /*
-        Ҫ�뷢����Ϣ,��Ҫ��socket�����л�������
+        要锟诫发锟斤拷锟斤拷息,锟斤拷要锟斤拷socket锟斤拷锟斤拷锟叫伙拷锟斤拷锟斤拷锟斤拷
         OutputStream getOutStream;
          */
         try {
@@ -43,7 +43,7 @@ public class Client {
             BufferedWriter bw = new BufferedWriter(osw);
             PrintWriter pw = new PrintWriter(bw, true);
 
-            pw.println("���!");
+            pw.println("你好!");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -52,8 +52,8 @@ public class Client {
     public static void main(String[] args) {
         /*
          * java.net.Socket
-         * Socket��װ��TCPͨ��ϸ��,����ֻ��Ҫ��ȷIP��ַ�Ͷ˿ں�
-         * ��������˷��������(������)����
+         * Socket锟斤拷装锟斤拷TCP通锟斤拷细锟斤拷,锟斤拷锟斤拷只锟斤拷要锟斤拷确IP锟斤拷址锟酵端口猴拷
+         * 锟斤拷锟斤拷锟斤拷锟斤拷朔锟斤拷锟斤拷锟斤拷锟斤拷(锟斤拷锟斤拷锟斤拷)锟斤拷锟斤拷
          */
         Client client = new Client();
         client.start();
