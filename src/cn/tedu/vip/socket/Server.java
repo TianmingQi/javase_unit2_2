@@ -47,11 +47,11 @@ public class Server {
             从socket中获得输入流
             InputStream getInputStream()
              */
-            InputStream is= socket.getInputStream();
+            InputStream is = socket.getInputStream();
             InputStreamReader isr = new InputStreamReader(is, StandardCharsets.UTF_8);
             BufferedReader br = new BufferedReader(isr);
 
-            String msg= br.readLine();
+            String msg = br.readLine();
             System.out.println("msg");
         } catch (Exception e) {
             e.printStackTrace();

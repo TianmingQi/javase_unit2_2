@@ -32,18 +32,18 @@ public class Client {
          */
     }
 
-    public void start(){
+    public void start() {
         /*
         要想发出信息,需要从socket对象中获得输出流
         OutputStream getOutStream;
          */
         try {
             OutputStream os = socket.getOutputStream();
-            OutputStreamWriter osw=  new OutputStreamWriter(os, StandardCharsets.UTF_8);
+            OutputStreamWriter osw = new OutputStreamWriter(os, StandardCharsets.UTF_8);
             BufferedWriter bw = new BufferedWriter(osw);
-            PrintWriter pw = new PrintWriter(bw);
+            PrintWriter pw = new PrintWriter(bw, true);
 
-            pw.write("你好!");
+            pw.println("你好!");
         } catch (Exception e) {
             e.printStackTrace();
         }
